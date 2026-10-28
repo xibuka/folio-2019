@@ -295,22 +295,18 @@ export default class EasterEggs
             {
                 offset: new THREE.Vector3(- 29.80, - 18.94, 0.5),
                 material: this.materials.shades.items.emeraldGreen,
-                code: 'MjAyMWVnZ2Fvem5kZXo='
             },
             {
                 offset: new THREE.Vector3(103.91, 128.56, 0.5),
                 material: this.materials.shades.items.red,
-                code: 'MjAyMWVnZ3Fxc3ZwcG8='
             },
             {
                 offset: new THREE.Vector3(39.68, -23.67, 0.5),
                 material: this.materials.shades.items.purple,
-                code: 'MjAyMWVnZ212b2Focnc='
             },
             {
                 offset: new THREE.Vector3(107.62, -155.75, 0.5),
                 material: this.materials.shades.items.blue,
-                code: 'MjAyMWVnZ2N1ZHBhaW4='
             },
         ]
 
@@ -318,7 +314,6 @@ export default class EasterEggs
         {
             const egg = {}
             egg.found = false
-            egg.code = _options.code
 
             // Create object
             egg.object = this.objects.add({
@@ -346,20 +341,9 @@ export default class EasterEggs
 
                     // egg.object.collision.body.removeEventListener('collide', egg.collisionCallback)
 
-                    const code = atob(egg.code)
-
                     window.setTimeout(() =>
                     {
-                        if(window.confirm(`
-You find an egg!
-Here is your code for a 30% discount on https://threejs-journey.xyz
-${code}
-
-Would you like to go on the subscription page?
-                        `))
-                        {
-                            window.open(`https://threejs-journey.xyz/subscribe/${code}`, '_blank')
-                        }
+                        window.alert('You found a hidden egg!')
 
                         window.setTimeout(() =>
                         {

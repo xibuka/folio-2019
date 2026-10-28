@@ -132,8 +132,6 @@ export default class Resources extends EventEmitter
             { name: 'informationContactLinkedinLabel', source: './models/information/static/contactLinkedinLabel.png', type: 'texture' },
             { name: 'informationContactMailLabel', source: './models/information/static/contactMailLabel.png', type: 'texture' },
 
-            { name: 'informationActivities', source: './models/information/static/activities.png', type: 'texture' },
-
             // Playground
             { name: 'playgroundStaticBase', source: './models/playground/static/base.glb' },
             { name: 'playgroundStaticCollision', source: './models/playground/static/collision.glb' },

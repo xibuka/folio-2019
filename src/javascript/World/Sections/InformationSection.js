@@ -89,19 +89,19 @@ export default class InformationSection
         // Options
         this.links.options = [
             {
-                href: 'https://twitter.com/bruno_simon/',
+                href: 'https://twitter.com/shi_wenhan',
                 labelTexture: this.resources.items.informationContactTwitterLabelTexture
             },
             {
-                href: 'https://github.com/brunosimon/',
+                href: 'https://github.com/xibuka',
                 labelTexture: this.resources.items.informationContactGithubLabelTexture
             },
             {
-                href: 'https://www.linkedin.com/in/simonbruno77/',
+                href: 'https://www.linkedin.com/in/wenhan-shi-0883a9132/',
                 labelTexture: this.resources.items.informationContactLinkedinLabelTexture
             },
             {
-                href: 'mailto:simon.bruno.77@gmail.com',
+                href: 'mailto:shibunkan@gmail.com',
                 labelTexture: this.resources.items.informationContactMailLabelTexture
             }
         ]
@@ -157,8 +157,33 @@ export default class InformationSection
         // Geometry
         this.activities.geometry = new THREE.PlaneGeometry(2 * this.activities.multiplier, 1 * this.activities.multiplier, 1, 1)
 
-        // Texture
-        this.activities.texture = this.resources.items.informationActivitiesTexture
+        // Build the personal introduction and writing topics as a texture.
+        // The source blog identifies Wenhan Shi and publishes technical posts
+        // about Kong/API gateways, cloud, DevOps, Python, and automation.
+        this.activities.canvas = document.createElement('canvas')
+        this.activities.canvas.width = 1200
+        this.activities.canvas.height = 600
+        this.activities.context = this.activities.canvas.getContext('2d')
+        this.activities.context.fillStyle = '#000000'
+        this.activities.context.fillRect(0, 0, this.activities.canvas.width, this.activities.canvas.height)
+        this.activities.context.fillStyle = '#ffffff'
+        this.activities.context.textBaseline = 'top'
+        this.activities.context.font = '900 78px "Arial Narrow", Arial, sans-serif'
+        this.activities.context.fillText('ABOUT', 12, 4)
+        this.activities.context.font = '700 40px Arial, sans-serif'
+        this.activities.context.fillText('WENHAN SHI', 14, 112)
+        this.activities.context.font = '28px Arial, sans-serif'
+        this.activities.context.fillText('Hi there 👋, Welcome to the dack side.', 14, 174)
+
+        this.activities.context.font = '900 54px "Arial Narrow", Arial, sans-serif'
+        this.activities.context.fillText('WRITING ABOUT', 430, 5)
+        this.activities.context.font = '700 40px Arial, sans-serif'
+        this.activities.context.fillText('KONG & API GATEWAYS', 430, 100)
+        this.activities.context.fillText('CLOUD & DEVOPS', 430, 205)
+        this.activities.context.fillText('PYTHON & AUTOMATION', 430, 310)
+        this.activities.context.fillText('LINUX & TOOLING', 430, 415)
+
+        this.activities.texture = new THREE.CanvasTexture(this.activities.canvas)
         this.activities.texture.magFilter = THREE.NearestFilter
         this.activities.texture.minFilter = THREE.LinearFilter
 

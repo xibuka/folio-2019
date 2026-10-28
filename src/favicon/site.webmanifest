@@ -1,6 +1,6 @@
 {
-    "name": "Bruno Simon",
-    "short_name": "Bruno Simon",
+    "name": "Wenhan blog",
+    "short_name": "Wenhan",
     "icons": [
         {
             "src": "/favicon/android-chrome-192x192.png",
@@ -13,7 +13,7 @@
             "type": "image/png"
         }
     ],
-    "theme_color": "#ffffff",
-    "background_color": "#ffffff",
+    "theme_color": "#2e2e33",
+    "background_color": "#2e2e33",
     "display": "standalone"
 }
