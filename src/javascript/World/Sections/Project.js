@@ -22,7 +22,6 @@ export default class Project
         this.imageSources = _options.imageSources
         this.floorTexture = _options.floorTexture
         this.link = _options.link
-        this.distinctions = _options.distinctions
 
         // Set up
         this.container = new THREE.Object3D()
@@ -41,7 +40,7 @@ export default class Project
         this.boards.xStart = - 5
         this.boards.xInter = 5
         this.boards.y = 5
-        this.boards.color = '#8e7161'
+        this.boards.color = '#2e2e33'
         this.boards.threeColor = new THREE.Color(this.boards.color)
 
         if(this.debug)
@@ -139,53 +138,6 @@ export default class Project
         this.floor.mesh = new THREE.Mesh(this.floor.geometry, this.floor.material)
         this.floor.mesh.matrixAutoUpdate = false
         this.floor.container.add(this.floor.mesh)
-
-        // Distinctions
-        if(this.distinctions)
-        {
-            for(const _distinction of this.distinctions)
-            {
-                let base = null
-                let collision = null
-                let shadowSizeX = null
-                let shadowSizeY = null
-
-                switch(_distinction.type)
-                {
-                    case 'awwwards':
-                        base = this.resources.items.projectsDistinctionsAwwwardsBase.scene
-                        collision = this.resources.items.projectsDistinctionsAwwwardsCollision.scene
-                        shadowSizeX = 1.5
-                        shadowSizeY = 1.5
-                        break
-
-                    case 'fwa':
-                        base = this.resources.items.projectsDistinctionsFWABase.scene
-                        collision = this.resources.items.projectsDistinctionsFWACollision.scene
-                        shadowSizeX = 2
-                        shadowSizeY = 1
-                        break
-
-                    case 'cssda':
-                        base = this.resources.items.projectsDistinctionsCSSDABase.scene
-                        collision = this.resources.items.projectsDistinctionsCSSDACollision.scene
-                        shadowSizeX = 1.2
-                        shadowSizeY = 1.2
-                        break
-                }
-
-                this.objects.add({
-                    base: base,
-                    collision: collision,
-                    offset: new THREE.Vector3(this.x + this.floor.x + _distinction.x, this.y + this.floor.y + _distinction.y, 0),
-                    rotation: new THREE.Euler(0, 0, 0),
-                    duplicated: true,
-                    shadow: { sizeX: shadowSizeX, sizeY: shadowSizeY, offsetZ: - 0.1, alpha: 0.5 },
-                    mass: 1.5,
-                    soundName: 'woodHit'
-                })
-            }
-        }
 
         // Area
         this.floor.area = this.areas.add({

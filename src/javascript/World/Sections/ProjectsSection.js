@@ -69,323 +69,97 @@ export default class ProjectsSection
 
     setList()
     {
-        this.list = [
+        const posts = [
             {
-                name: 'Three.js Journey',
-                imageSources:
-                [
-                    './models/projects/threejsJourney/slideA.webp',
-                    './models/projects/threejsJourney/slideB.webp',
-                    './models/projects/threejsJourney/slideC.webp',
-                    './models/projects/threejsJourney/slideD.webp'
-                ],
-                floorTexture: this.resources.items.projectsThreejsJourneyFloorTexture,
-                link:
-                {
-                    href: 'https://threejs-journey.com',
-                    x: - 4.8,
-                    y: - 3,
-                    halfExtents:
-                    {
-                        x: 3.2,
-                        y: 1.5
-                    }
-                },
-                distinctions:
-                [
-                    { type: 'fwa', x: 3.95, y: 4.15 }
-                ]
+                name: 'Konnect + AWS ECS',
+                date: '2025.05.01',
+                category: 'CLOUD / API GATEWAY',
+                titleLines: ['Building an API Gateway', 'Environment with Konnect', '+ AWS ECS'],
+                href: 'https://wenhan.blog/en/posts/20250501_konnect_ecs_gui/'
             },
             {
-                name: 'Chartogne Taillet',
-                imageSources:
-                [
-                    './models/projects/chartogne/slideA.jpg',
-                    './models/projects/chartogne/slideB.jpg',
-                    './models/projects/chartogne/slideC.jpg'
-                ],
-                floorTexture: this.resources.items.projectsChartogneFloorTexture,
-                link:
-                {
-                    href: 'https://chartogne-taillet.com',
-                    x: - 4.8,
-                    y: - 3.3,
-                    halfExtents:
-                    {
-                        x: 3.2,
-                        y: 1.5
-                    }
-                },
-                distinctions:
-                [
-                    { type: 'awwwards', x: 3.95, y: 4.15 },
-                    { type: 'fwa', x: 5.6, y: 4.15 },
-                    { type: 'cssda', x: 7.2, y: 4.15 }
-                ]
+                name: 'Kong Serverless',
+                date: '2025.04.15',
+                category: 'KONG / AUTOMATION',
+                titleLines: ['Make Request Processing', 'Smarter with Kong’s', 'Serverless Feature'],
+                href: 'https://wenhan.blog/en/posts/20250415_kong_serverless/'
             },
             {
-                name: 'Bonhomme | 10 ans',
-                imageSources:
-                [
-                    './models/projects/bonhomme10ans/slideA.webp',
-                    './models/projects/bonhomme10ans/slideB.webp',
-                    './models/projects/bonhomme10ans/slideC.webp',
-                    './models/projects/bonhomme10ans/slideD.webp'
-                ],
-                floorTexture: this.resources.items.projectsBonhomme10ansFloorTexture,
-                link:
-                {
-                    href: 'https://anniversary.bonhommeparis.com/',
-                    x: - 4.8,
-                    y: - 2,
-                    halfExtents:
-                    {
-                        x: 3.2,
-                        y: 1.5
-                    }
-                },
-                distinctions:
-                [
-                    { type: 'awwwards', x: 3.95, y: 4.15 },
-                    { type: 'fwa', x: 5.6, y: 4.15 },
-                ]
+                name: 'Kong + GraphQL',
+                date: '2025.03.25',
+                category: 'KONG / GRAPHQL',
+                titleLines: ['Accessing and Managing', 'GraphQL APIs with Kong', 'Gateway'],
+                href: 'https://wenhan.blog/en/posts/20250325_kong_graphql_mngm/'
             },
             {
-                name: 'Luni.app',
-                imageSources:
-                [
-                    './models/projects/luni/slideA.webp',
-                    './models/projects/luni/slideB.webp',
-                    './models/projects/luni/slideC.webp',
-                    './models/projects/luni/slideD.webp'
-                ],
-                floorTexture: this.resources.items.projectsLuniFloorTexture,
-                link:
-                {
-                    href: 'https://luni.app',
-                    x: - 4.8,
-                    y: - 3,
-                    halfExtents:
-                    {
-                        x: 3.2,
-                        y: 1.5
-                    }
-                },
-                distinctions:
-                [
-                    { type: 'awwwards', x: 3.95, y: 4.15 },
-                    { type: 'fwa', x: 5.6, y: 4.15 },
-                ]
+                name: 'Kong mTLS',
+                date: '2024.12.24',
+                category: 'KONG / SECURITY',
+                titleLines: ['Kong Gateway', 'Introduction: mTLS', 'Support'],
+                href: 'https://wenhan.blog/en/posts/20241224_kong_101_mtls/'
             },
             {
-                name: 'Madbox',
-                imageSources:
-                [
-                    './models/projects/madbox/slideA.jpg',
-                    './models/projects/madbox/slideB.jpg',
-                    './models/projects/madbox/slideC.jpg'
-                ],
-                floorTexture: this.resources.items.projectsMadboxFloorTexture,
-                link:
-                {
-                    href: 'https://madbox.io',
-                    x: - 4.8,
-                    y: - 4,
-                    halfExtents:
-                    {
-                        x: 3.2,
-                        y: 1.5
-                    }
-                },
-                distinctions:
-                [
-                    { type: 'awwwards', x: 3.95, y: 4.15 },
-                    { type: 'fwa', x: 5.6, y: 4.15 }
-                ]
-            },
-            {
-                name: 'Scout',
-                imageSources:
-                [
-                    './models/projects/scout/slideA.jpg',
-                    './models/projects/scout/slideB.jpg',
-                    './models/projects/scout/slideC.jpg'
-                ],
-                floorTexture: this.resources.items.projectsScoutFloorTexture,
-                link:
-                {
-                    href: 'https://fromscout.com',
-                    x: - 4.8,
-                    y: - 2,
-                    halfExtents:
-                    {
-                        x: 3.2,
-                        y: 1.5
-                    }
-                },
-                distinctions:
-                [
-                ]
-            },
-            // {
-            //     name: 'Zenly',
-            //     imageSources:
-            //     [
-            //         './models/projects/zenly/slideA.jpg',
-            //         './models/projects/zenly/slideB.jpg',
-            //         './models/projects/zenly/slideC.jpg'
-            //     ],
-            //     floorTexture: this.resources.items.projectsZenlyFloorTexture,
-            //     link:
-            //     {
-            //         href: 'https://zen.ly',
-            //         x: - 4.8,
-            //         y: - 4.2,
-            //         halfExtents:
-            //         {
-            //             x: 3.2,
-            //             y: 1.5
-            //         }
-            //     },
-            //     distinctions:
-            //     [
-            //         { type: 'awwwards', x: 3.95, y: 4.15 },
-            //         { type: 'fwa', x: 5.6, y: 4.15 },
-            //         { type: 'cssda', x: 7.2, y: 4.15 }
-            //     ]
-            // },
-            {
-                name: 'priorHoldings',
-                imageSources:
-                [
-                    './models/projects/priorHoldings/slideA.jpg',
-                    './models/projects/priorHoldings/slideB.jpg',
-                    './models/projects/priorHoldings/slideC.jpg'
-                ],
-                floorTexture: this.resources.items.projectsPriorHoldingsFloorTexture,
-                link:
-                {
-                    href: 'https://prior.co.jp/discover/',
-                    x: - 4.8,
-                    y: - 3,
-                    halfExtents:
-                    {
-                        x: 3.2,
-                        y: 1.5
-                    }
-                },
-                distinctions:
-                [
-                    { type: 'awwwards', x: 3.95, y: 4.15 },
-                    { type: 'fwa', x: 5.6, y: 4.15 },
-                    { type: 'cssda', x: 7.2, y: 4.15 }
-                ]
-            },
-            {
-                name: 'orano',
-                imageSources:
-                [
-                    './models/projects/orano/slideA.jpg',
-                    './models/projects/orano/slideB.jpg',
-                    './models/projects/orano/slideC.jpg'
-                ],
-                floorTexture: this.resources.items.projectsOranoFloorTexture,
-                link:
-                {
-                    href: 'https://orano.imm-g-prod.com/experience/innovation/en',
-                    x: - 4.8,
-                    y: - 3.4,
-                    halfExtents:
-                    {
-                        x: 3.2,
-                        y: 1.5
-                    }
-                },
-                distinctions:
-                [
-                    { type: 'awwwards', x: 3.95, y: 4.15 },
-                    { type: 'fwa', x: 5.6, y: 4.15 },
-                    { type: 'cssda', x: 7.2, y: 4.15 }
-                ]
-            },
-            {
-                name: 'citrixRedbull',
-                imageSources:
-                [
-                    './models/projects/citrixRedbull/slideA.jpg',
-                    './models/projects/citrixRedbull/slideB.jpg',
-                    './models/projects/citrixRedbull/slideC.jpg'
-                ],
-                floorTexture: this.resources.items.projectsCitrixRedbullFloorTexture,
-                link:
-                {
-                    href: 'https://thenewmobileworkforce.imm-g-prod.com/',
-                    x: - 4.8,
-                    y: - 4.4,
-                    halfExtents:
-                    {
-                        x: 3.2,
-                        y: 1.5
-                    }
-                },
-                distinctions:
-                [
-                    { type: 'awwwards', x: 3.95, y: 4.15 },
-                    { type: 'fwa', x: 5.6, y: 4.15 },
-                    { type: 'cssda', x: 7.2, y: 4.15 }
-                ]
-            },
-            // {
-            //     name: 'gleecChat',
-            //     imageSources:
-            //     [
-            //         './models/projects/gleecChat/slideA.jpg',
-            //         './models/projects/gleecChat/slideB.jpg',
-            //         './models/projects/gleecChat/slideC.jpg',
-            //         './models/projects/gleecChat/slideD.jpg'
-            //     ],
-            //     floorTexture: this.resources.items.projectsGleecChatFloorTexture,
-            //     link:
-            //     {
-            //         href: 'http://gleec.imm-g-prod.com',
-            //         x: - 4.8,
-            //         y: - 3.4,
-            //         halfExtents:
-            //         {
-            //             x: 3.2,
-            //             y: 1.5
-            //         }
-            //     },
-            //     distinctions:
-            //     [
-            //         { type: 'awwwards', x: 3.95, y: 4.15 },
-            //         { type: 'fwa', x: 5.6, y: 4.15 },
-            //         { type: 'cssda', x: 7.2, y: 4.15 }
-            //     ]
-            // },
-            // {
-            //     name: 'keppler',
-            //     imageSources:
-            //     [
-            //         './models/projects/keppler/slideA.jpg',
-            //         './models/projects/keppler/slideB.jpg',
-            //         './models/projects/keppler/slideC.jpg'
-            //     ],
-            //     floorTexture: this.resources.items.projectsKepplerFloorTexture,
-            //     link:
-            //     {
-            //         href: 'https://brunosimon.github.io/keppler/',
-            //         x: 2.75,
-            //         y: - 1.1,
-            //         halfExtents:
-            //         {
-            //             x: 3.2,
-            //             y: 1.5
-            //         }
-            //     },
-            //     distinctions: []
-            // }
+                name: 'Kong Caching',
+                date: '2024.12.06',
+                category: 'KONG / PERFORMANCE',
+                titleLines: ['Kong Gateway', 'Introduction: Boosting', 'Performance with Caching'],
+                href: 'https://wenhan.blog/en/posts/20241206_kong_101_proxy_caching/'
+            }
         ]
+
+        this.list = posts.map((_post) => ({
+            name: _post.name,
+            imageSources: [this.createArticleCover(_post)],
+            floorTexture: this.createArticleFloorTexture(_post),
+            link: {
+                href: _post.href,
+                x: - 4.8,
+                y: - 3,
+                halfExtents: { x: 3.2, y: 1.5 }
+            }
+        }))
+    }
+
+    createArticleCover(_post)
+    {
+        const escapeXml = (_value) => _value.replace(/[&<>"']/g, (_character) => ({
+            '&': '&amp;',
+            '<': '&lt;',
+            '>': '&gt;',
+            '"': '&quot;',
+            "'": '&apos;'
+        }[_character]))
+        const title = _post.titleLines.map((_line, _index) =>
+            `<text x="56" y="${240 + _index * 68}" fill="#ffffff" font-family="Arial, sans-serif" font-size="56" font-weight="700">${escapeXml(_line)}</text>`
+        ).join('')
+        const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="512" viewBox="0 0 1024 512"><rect width="1024" height="512" fill="#2e2e33"/><path d="M56 114H968" stroke="#ffbd59" stroke-width="4"/><text x="56" y="72" fill="#ffbd59" font-family="Arial, sans-serif" font-size="26" font-weight="700" letter-spacing="5">WENHAN BLOG</text><text x="968" y="72" fill="#ffffff" font-family="Arial, sans-serif" font-size="24" text-anchor="end">${_post.date}</text>${title}<text x="56" y="466" fill="#c8c8ce" font-family="Arial, sans-serif" font-size="22" letter-spacing="3">${escapeXml(_post.category)}</text><text x="968" y="466" fill="#ffbd59" font-family="Arial, sans-serif" font-size="22" text-anchor="end">READ ARTICLE ↗</text></svg>`
+
+        return `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`
+    }
+
+    createArticleFloorTexture(_post)
+    {
+        const canvas = document.createElement('canvas')
+        canvas.width = 1024
+        canvas.height = 512
+        const context = canvas.getContext('2d')
+        context.fillStyle = '#000000'
+        context.fillRect(0, 0, canvas.width, canvas.height)
+        context.fillStyle = '#ffffff'
+        context.textBaseline = 'top'
+        context.font = '700 34px Arial, sans-serif'
+        context.fillText('WENHAN BLOG', 24, 18)
+        context.font = '700 30px Arial, sans-serif'
+        context.fillText(_post.date, 790, 18)
+        context.font = '700 42px Arial, sans-serif'
+        context.fillText(_post.category, 24, 104)
+        context.font = '700 48px Arial, sans-serif'
+        _post.titleLines.forEach((_line, _index) =>
+        {
+            context.fillText(_line, 24, 194 + _index * 76, 960)
+        })
+
+        return new THREE.CanvasTexture(canvas)
     }
 
     setZone()
